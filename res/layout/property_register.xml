@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#7EC0EE"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30sp"
+        android:text="用户登录"
+        android:textColor="#FFF"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </RelativeLayout>
+<Button
+        android:id="@+id/register"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="登录"
+        android:textColor="#000"
+        android:textSize="26dp" />
+
+<TextView
+    android:id="@+id/TextView03"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/register"
+    android:layout_alignParentLeft="true"
+    android:layout_marginBottom="20dp"
+    android:text=" 密码："
+    android:textColor="#FFF"
+    android:textSize="23sp" />
+
+<TextView
+    android:id="@+id/TextView02"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/user"
+    android:layout_alignParentLeft="true"
+    android:text=" 账号："
+    android:textColor="#FFF"
+    android:textSize="23sp" />
+
+<EditText
+    android:id="@+id/user"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textView1"
+    android:layout_toRightOf="@+id/register"
+    android:ems="10"
+    android:hint="请填写小区的协议账号"
+    android:inputType="text"
+    android:textColor="#000"
+    android:textColorLink="#FFF" >
+
+    <requestFocus />
+</EditText>
+
+<EditText
+    android:id="@+id/password"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/TextView03"
+    android:layout_toRightOf="@+id/register"
+    android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    android:ems="10"
+    android:hint="密码长度为6-15个字符"
+    android:password="true"
+    android:textColor="#000"
+    android:textColorLink="#FFF" />
+
+    </RelativeLayout>
