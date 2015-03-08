@@ -15,6 +15,11 @@ import com.zhcs.community.SpaceHistoryBean;
 import com.zhcs.regAndlog.Login;
 import com.zhcs.regAndlog.R;
 
+/**
+ * 
+ * @author Administrator
+ * @func 某个车位具体状态信息
+ */
 public class HistoryInformation extends Activity{
 	private TextView userName, number, owner, time, cost, fine, dealCount;
 	

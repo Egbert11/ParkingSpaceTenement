@@ -13,6 +13,11 @@ import com.avos.avoscloud.FindCallback;
 import com.zhcs.community.CommunityInfo;
 import com.zhcs.community.SpaceManageBean;
 
+/**
+ * 
+ * @author Administrator
+ * @note 获取小区车位状态信息
+ */
 public class GetManageInfo {
 	private static ArrayList<SpaceManageBean> list = new ArrayList<SpaceManageBean>();
 	private static Activity activity = null;

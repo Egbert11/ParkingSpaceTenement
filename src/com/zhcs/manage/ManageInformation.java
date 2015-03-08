@@ -14,8 +14,13 @@ import com.zhcs.community.SpaceManageBean;
 import com.zhcs.regAndlog.Login;
 import com.zhcs.regAndlog.R;
 
+/**
+ * 
+ * @author Administrator
+ * @function 显示车位详细信息
+ */
 public class ManageInformation extends Activity{
-	private TextView userName, number, owner, state, dealCount;
+	private TextView number, owner, state;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -24,18 +29,15 @@ public class ManageInformation extends Activity{
 		//去除标题
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.property_manage_information);
-		userName = (TextView) findViewById(R.id.TextView04);
 		number = (TextView) findViewById(R.id.textView6);
 		owner = (TextView) findViewById(R.id.TextView01);
 		state = (TextView) findViewById(R.id.TextView02);
-		dealCount = (TextView) findViewById(R.id.TextView03);
 		
 		Bundle data = this.getIntent().getExtras();
 		int index = data.getInt("index");
 		ArrayList<SpaceManageBean> list = GetManageInfo.getList();
 		final SpaceManageBean bean = list.get(index);
 		
-		userName.setText("用户名："+CommunityInfo.getUserName());
 		number.setText(String.valueOf(bean.getNumber()));
 		owner.setText(String.valueOf(bean.getOwner()));
 		switch(bean.getState()) {
@@ -51,13 +53,5 @@ public class ManageInformation extends Activity{
 		default:
 			break;
 		}
-		dealCount.setText(String.valueOf(bean.getDealNum()));
 	}
-	
-	public void logoutFun(View v) {
-		Intent intent = new Intent(ManageInformation.this, Login.class);
-		startActivity(intent);
-		finish();
-	}
-
 }

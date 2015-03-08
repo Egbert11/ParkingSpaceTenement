@@ -7,19 +7,6 @@
     tools:context="com.example.parkingspace_ui.MainActivity$PlaceholderFragment" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/setbar_bg_blue"
-        android:text="用户名:rokey000"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#fff"
-        android:textSize="20dp" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +15,8 @@
         android:layout_marginTop="10dp"
         android:text="车位管理"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#000" />
+        android:textSize="30dp"
+        android:textColor="#FFF" />
 
     <ListView
         android:id="@+id/listView1"
@@ -42,19 +30,6 @@
         android:headerDividersEnabled="true">
 
     </ListView>
-
-    <Button
-        android:id="@+id/button4"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/setbar_bg_white"
-        android:textColor="#000"
-        android:onClick="logoutFun"
-        android:text="注销" />
-
     </RelativeLayout>
 
     

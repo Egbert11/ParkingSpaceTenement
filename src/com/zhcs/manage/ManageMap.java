@@ -21,10 +21,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
+/**
+ * 
+ * @author Administrator
+ * @func 车位状态
+ */
 public class ManageMap extends Activity{
 
 	private ListView mListView;
-	private TextView userName;
 	private static ArrayList<SpaceManageBean> list = GetManageInfo.getList();
 	
 	@Override
@@ -35,7 +39,6 @@ public class ManageMap extends Activity{
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.property_manage_map);
 		
-		userName = (TextView)findViewById(R.id.textView1);
 		mListView = (ListView)findViewById(R.id.listView1);
 		
 		//将返回列表按照车位号进行排序
@@ -50,14 +53,12 @@ public class ManageMap extends Activity{
 		};
 		Collections.sort(list,comparator);
 		
-		userName.setText("用户名:"+CommunityInfo.getUserName());
 		mListView.setAdapter(new SpaceListAdapter());
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				// TODO Auto-generated method stub
 				Intent intent = new Intent(ManageMap.this, ManageInformation.class);
 				Bundle bun = new Bundle();
 				bun.putInt("index", position);
@@ -80,26 +81,21 @@ public class ManageMap extends Activity{
 		
 		@Override
 		public int getCount() {
-			// TODO Auto-generated method stub
 			return list.size();
 		}
 
 		@Override
 		public Object getItem(int position) {
-			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
 		public long getItemId(int position) {
-			// TODO Auto-generated method stub
 			return 0;
 		}
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			// TODO Auto-generated method stub
-			
 			convertView = View.inflate(ManageMap.this, R.layout.manageinfo_item, null);
 			TextView title = (TextView)convertView.findViewById(R.id.title);
 			int num = position + 1;
@@ -108,16 +104,6 @@ public class ManageMap extends Activity{
 		}
 		
 	}
-	
-//	@Override
-//	public boolean onKeyDown(int keyCode, KeyEvent event) {
-//		if (keyCode == KeyEvent.KEYCODE_BACK) {
-//			moveTaskToBack(true);
-//			return true;
-//		}
-//		return super.onKeyDown(keyCode, event);
-//	}
-
 }
 
 

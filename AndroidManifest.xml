@@ -31,7 +31,10 @@
             android:name="com.zhcs.manage.CommunityManage"
             android:label="@string/app_name" />
         <activity
-            android:name="com.zhcs.manage.VerifyInformation"
+            android:name="com.zhcs.manage.EnterVerify"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.zhcs.manage.LeaveVerify"
             android:label="@string/app_name" />
          <activity
             android:name="com.zhcs.manage.ManageMap"

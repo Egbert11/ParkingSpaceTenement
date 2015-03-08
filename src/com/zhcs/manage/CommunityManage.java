@@ -17,6 +17,11 @@ import com.zhcs.regAndlog.Login;
 import com.zhcs.regAndlog.R;
 import com.zijunlin.Zxing.Demo.CaptureActivity;
 
+/**
+ * 
+ * @author Administrator
+ * @func 物业端主界面
+ */
 public class CommunityManage extends Activity{
 	private TextView userName;
 
@@ -26,19 +31,9 @@ public class CommunityManage extends Activity{
 		
 		//去除标题
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.property_registered);
-		
-		userName = (TextView)findViewById(R.id.textView1);
-		
-		userName.setText("用户名："+CommunityInfo.getUserName());
+		setContentView(R.layout.main_page);
 	}
 	
-	//一键验证
-	public void checkFun(View v) {
-		Intent intent=new Intent();
-		intent.setClass(CommunityManage.this,CaptureActivity.class);
-		startActivity(intent);
-	}
 	
 	//车位管理
 	public void manageFun(View v) {
@@ -46,17 +41,20 @@ public class CommunityManage extends Activity{
 		GetManageInfo.getSpaceInfo(CommunityManage.this);
 	}
 	
-	//历史订单
-	public void historyFun(View v) {
-		GetHistoryInfo.getSpaceInfo(CommunityManage.this);
-		
+	//进入验证
+	public void enterFun(View v) {
+		Intent intent=new Intent();
+		intent.putExtra("type", "enter");
+		intent.setClass(CommunityManage.this,CaptureActivity.class);
+		startActivity(intent);
 	}
 	
-	//注销
-	public void logoutFun(View v) {
-		Intent intent = new Intent(CommunityManage.this, Login.class);
+	//离开验证
+	public void leaveFun(View v) {
+		Intent intent=new Intent();
+		intent.putExtra("type", "leave");
+		intent.setClass(CommunityManage.this,CaptureActivity.class);
 		startActivity(intent);
-		finish();
 	}
 	
 	 @Override

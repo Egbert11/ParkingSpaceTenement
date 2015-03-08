@@ -24,16 +24,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="33dp"
-        android:text="成交笔数:"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#000" />
+    
 
     <TextView
         android:id="@+id/TextView01"
@@ -57,30 +48,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000" />
 
-    <TextView
-        android:id="@+id/TextView04"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/setbar_bg_blue"
-        android:text="用户名:rokey000"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#fff"
-        android:textSize="20dp" />
+ 
 
-    <TextView
-        android:id="@+id/TextView03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignLeft="@+id/TextView02"
-        android:layout_toRightOf="@+id/textView4"
-        android:text="Large Textaaaaaaaaa"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#000" />
+    
 
     <TextView
         android:id="@+id/textView6"
@@ -99,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/TextView04"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="车位编号:"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#000" />

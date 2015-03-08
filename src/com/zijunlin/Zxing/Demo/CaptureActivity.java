@@ -3,10 +3,11 @@ package com.zijunlin.Zxing.Demo;
 import java.io.IOException;
 import java.util.Vector;
 
-import com.zhcs.manage.VerifyInformation;
+import com.zhcs.manage.EnterVerify;
+import com.zhcs.manage.LeaveVerify;
 import com.zhcs.regAndlog.*;
-import zxing.standopen.result;
 
+import zxing.standopen.result;
 import cn.domob.android.ads.DomobAdEventListener;
 import cn.domob.android.ads.DomobAdView;
 import cn.domob.android.ads.DomobAdManager.ErrorCode;
@@ -71,8 +72,7 @@ public class CaptureActivity extends Activity implements Callback {
 		back.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-			finish();	
+				finish();	
 			}
 		});
 	}
@@ -176,7 +176,12 @@ public class CaptureActivity extends Activity implements Callback {
 //		}
 		Intent intent=new Intent();
 		intent.putExtra("info",obj.getText().toString());
-		intent.setClass(CaptureActivity.this,VerifyInformation.class);
+		intent.setClass(CaptureActivity.this,EnterVerify.class);
+		if (this.getIntent().getExtras().getString("type") == "enter"){
+			intent.setClass(CaptureActivity.this,EnterVerify.class);
+		}else{
+			intent.setClass(CaptureActivity.this,LeaveVerify.class);
+		}
 		startActivity(intent);
 		finish();
 	}

@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#8DEEEE"
+    android:orientation="vertical"
+    tools:context="com.example.parkingspace_ui.MainActivity$PlaceholderFragment" >
+
+    <Button
+        android:id="@+id/enter_check"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/space_manage"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_yellow"
+        android:text="进入验证"
+        android:onClick="enterFun"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/leave_check"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignBaseline="@+id/enter_check"
+        android:layout_alignBottom="@+id/enter_check"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_red"
+        android:text="离开验证"
+        android:onClick="leaveFun"
+        android:textSize="25sp" />
+
+
+    <Button
+        android:id="@+id/space_manage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_purple"
+        android:text="车位管理"
+        android:onClick="manageFun"
+        android:textSize="25sp" />
+
+</RelativeLayout>
